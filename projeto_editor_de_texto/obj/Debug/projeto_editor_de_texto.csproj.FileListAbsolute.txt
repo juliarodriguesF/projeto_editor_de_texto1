@@ -1,0 +1,10 @@
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\bin\Debug\projeto_editor_de_texto.exe.config
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\bin\Debug\projeto_editor_de_texto.exe
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\bin\Debug\projeto_editor_de_texto.pdb
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\obj\Debug\projeto_editor_de_texto.csproj.AssemblyReference.cache
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\obj\Debug\projeto_editor_de_texto.Form1.resources
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\obj\Debug\projeto_editor_de_texto.Properties.Resources.resources
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\obj\Debug\projeto_editor_de_texto.csproj.GenerateResource.cache
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\obj\Debug\projeto_editor_de_texto.csproj.CoreCompileInputs.cache
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\obj\Debug\projeto_editor_de_texto.exe
+C:\Users\autologon\source\repos\projeto_editor_de_texto\projeto_editor_de_texto\obj\Debug\projeto_editor_de_texto.pdb
