@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\jfaca\\OneDrive\\Desktop\\projetos_C#\\projeto_editor_de_texto1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D6927A5-0159-4910-A179-7E3B44C711B2}|projeto_editor_de_texto\\projeto_editor_de_texto.csproj|C:\\Users\\jfaca\\OneDrive\\Desktop\\projetos_C#\\projeto_editor_de_texto1\\projeto_editor_de_texto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1D6927A5-0159-4910-A179-7E3B44C711B2}|projeto_editor_de_texto\\projeto_editor_de_texto.csproj|c:\\users\\jfaca\\onedrive\\desktop\\projetos_c#\\projeto_editor_de_texto1\\projeto_editor_de_texto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1D6927A5-0159-4910-A179-7E3B44C711B2}|projeto_editor_de_texto\\projeto_editor_de_texto.csproj|solutionrelative:projeto_editor_de_texto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D6927A5-0159-4910-A179-7E3B44C711B2}|projeto_editor_de_texto\\projeto_editor_de_texto.csproj|c:\\users\\jfaca\\onedrive\\desktop\\projetos_c#\\projeto_editor_de_texto1\\projeto_editor_de_texto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1D6927A5-0159-4910-A179-7E3B44C711B2}|projeto_editor_de_texto\\projeto_editor_de_texto.csproj|C:\\Users\\jfaca\\OneDrive\\Desktop\\projetos_C#\\projeto_editor_de_texto1\\projeto_editor_de_texto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D6927A5-0159-4910-A179-7E3B44C711B2}|projeto_editor_de_texto\\projeto_editor_de_texto.csproj|solutionrelative:projeto_editor_de_texto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "projeto_editor_de_texto\\Form1.cs",
               "ToolTip": "C:\\Users\\jfaca\\OneDrive\\Desktop\\projetos_C#\\projeto_editor_de_texto1\\projeto_editor_de_texto\\Form1.cs",
               "RelativeToolTip": "projeto_editor_de_texto\\Form1.cs",
-              "ViewState": "AQIAAJIBAAAAAAAAAAAuwKIBAAAZAAAA",
+              "ViewState": "AQIAAMcBAAAAAAAAAAAqwNYBAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-19T18:47:21.924Z",
               "EditorCaption": ""

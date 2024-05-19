@@ -185,7 +185,54 @@ namespace projeto_editor_de_texto
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        // Função para aumentar a fonte do texto selecionado no RichTextBox
+        private void AumentarFonte()
+        {
+            // Verifica se há algum texto selecionado
+            if (rtb_text.SelectedText.Length > 0)
+            {
+                // Obtém a fonte atual da seleção
+                Font fonteAtual = rtb_text.SelectionFont;
+
+                // Cria uma nova fonte com tamanho aumentado
+                Font novaFonte = new Font(fonteAtual.FontFamily, fonteAtual.Size + 2, fonteAtual.Style);
+
+                // Aplica a nova fonte ao texto selecionado
+                rtb_text.SelectionFont = novaFonte;
+            }
+            else
+            {
+                // Se não houver texto selecionado, exibe uma mensagem informando ao usuário
+                MessageBox.Show("Por favor, selecione o texto que deseja aumentar a fonte.", "Nenhuma Seleção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        // Função para diminuir a fonte do texto selecionado no RichTextBox
+        private void DiminuirFonte()
+        {
+            // Verifica se há algum texto selecionado
+            if (rtb_text.SelectedText.Length > 0)
+            {
+                // Obtém a fonte atual da seleção
+                Font fonteAtual = rtb_text.SelectionFont;
+
+                // Garante que a fonte não seja diminuída para menos de um tamanho mínimo
+                if (fonteAtual.Size > 2)
+                {
+                    // Cria uma nova fonte com tamanho diminuído
+                    Font novaFonte = new Font(fonteAtual.FontFamily, fonteAtual.Size - 2, fonteAtual.Style);
+
+                    // Aplica a nova fonte ao texto selecionado
+                    rtb_text.SelectionFont = novaFonte;
+                }
+                else
+                {
+                    // Se o tamanho da fonte é muito pequeno, exibe uma mensagem informando ao usuário
+                    MessageBox.Show("O tamanho da fonte é muito pequeno para ser diminuído.", "Tamanho da Fonte", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+            private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Novo();
         }
@@ -417,6 +464,16 @@ namespace projeto_editor_de_texto
         private void btn_fonte_Click(object sender, EventArgs e)
         {
             MudarFonte();
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            DiminuirFonte();
+        }
+
+        private void aumentar_Click(object sender, EventArgs e)
+        {
+            AumentarFonte();
         }
     }
     }
