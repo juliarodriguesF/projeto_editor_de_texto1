@@ -71,19 +71,23 @@
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
             this.editarToolStripMenuItem,
             this.formatarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1068, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,48 +102,52 @@
             this.sairToolStripMenuItem1,
             this.toolStripSeparator1});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.novoToolStripMenuItem.Text = "Novo";
+            this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.abrirToolStripMenuItem.Text = "Abrir ";
+            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
             // 
             // imprimirToolStripMenuItem
             // 
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
+            this.imprimirToolStripMenuItem.Click += new System.EventHandler(this.imprimirToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(177, 6);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(146, 6);
             // 
             // sairToolStripMenuItem1
             // 
             this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
-            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(149, 26);
             this.sairToolStripMenuItem1.Text = "Sair";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(146, 6);
             // 
             // editarToolStripMenuItem
             // 
@@ -149,32 +157,36 @@
             this.desfazerToolStripMenuItem,
             this.refazerToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // copiarToolStripMenuItem
             // 
             this.copiarToolStripMenuItem.Name = "copiarToolStripMenuItem";
-            this.copiarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copiarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.copiarToolStripMenuItem.Text = "Copiar ";
+            this.copiarToolStripMenuItem.Click += new System.EventHandler(this.copiarToolStripMenuItem_Click);
             // 
             // colarToolStripMenuItem
             // 
             this.colarToolStripMenuItem.Name = "colarToolStripMenuItem";
-            this.colarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.colarToolStripMenuItem.Text = "Colar";
+            this.colarToolStripMenuItem.Click += new System.EventHandler(this.colarToolStripMenuItem_Click);
             // 
             // desfazerToolStripMenuItem
             // 
             this.desfazerToolStripMenuItem.Name = "desfazerToolStripMenuItem";
-            this.desfazerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.desfazerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.desfazerToolStripMenuItem.Text = "Desfazer";
+            this.desfazerToolStripMenuItem.Click += new System.EventHandler(this.desfazerToolStripMenuItem_Click);
             // 
             // refazerToolStripMenuItem
             // 
             this.refazerToolStripMenuItem.Name = "refazerToolStripMenuItem";
-            this.refazerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refazerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.refazerToolStripMenuItem.Text = "Refazer";
+            this.refazerToolStripMenuItem.Click += new System.EventHandler(this.refazerToolStripMenuItem_Click);
             // 
             // formatarToolStripMenuItem
             // 
@@ -184,25 +196,25 @@
             this.sublinhadoToolStripMenuItem,
             this.alinhamentoToolStripMenuItem});
             this.formatarToolStripMenuItem.Name = "formatarToolStripMenuItem";
-            this.formatarToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.formatarToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.formatarToolStripMenuItem.Text = "Formatar";
             // 
             // negritoToolStripMenuItem
             // 
             this.negritoToolStripMenuItem.Name = "negritoToolStripMenuItem";
-            this.negritoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.negritoToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.negritoToolStripMenuItem.Text = "Negrito";
             // 
             // itálicoToolStripMenuItem
             // 
             this.itálicoToolStripMenuItem.Name = "itálicoToolStripMenuItem";
-            this.itálicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.itálicoToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.itálicoToolStripMenuItem.Text = "Itálico";
             // 
             // sublinhadoToolStripMenuItem
             // 
             this.sublinhadoToolStripMenuItem.Name = "sublinhadoToolStripMenuItem";
-            this.sublinhadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sublinhadoToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.sublinhadoToolStripMenuItem.Text = "Sublinhado";
             // 
             // alinhamentoToolStripMenuItem
@@ -212,29 +224,30 @@
             this.esquerdaToolStripMenuItem,
             this.direitaToolStripMenuItem});
             this.alinhamentoToolStripMenuItem.Name = "alinhamentoToolStripMenuItem";
-            this.alinhamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alinhamentoToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.alinhamentoToolStripMenuItem.Text = "Alinhamento";
             // 
             // centralizarToolStripMenuItem
             // 
             this.centralizarToolStripMenuItem.Name = "centralizarToolStripMenuItem";
-            this.centralizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.centralizarToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.centralizarToolStripMenuItem.Text = "Centralizar";
             // 
             // esquerdaToolStripMenuItem
             // 
             this.esquerdaToolStripMenuItem.Name = "esquerdaToolStripMenuItem";
-            this.esquerdaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.esquerdaToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.esquerdaToolStripMenuItem.Text = "Esquerda";
             // 
             // direitaToolStripMenuItem
             // 
             this.direitaToolStripMenuItem.Name = "direitaToolStripMenuItem";
-            this.direitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.direitaToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.direitaToolStripMenuItem.Text = "Direita";
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_novo,
             this.btn_open,
@@ -251,9 +264,9 @@
             this.btn_left,
             this.btn_right,
             this.btn_centro});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1068, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -263,7 +276,7 @@
             this.btn_novo.Image = ((System.Drawing.Image)(resources.GetObject("btn_novo.Image")));
             this.btn_novo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(23, 22);
+            this.btn_novo.Size = new System.Drawing.Size(29, 24);
             this.btn_novo.Tag = "Novo";
             this.btn_novo.Text = "Novo";
             this.btn_novo.Click += new System.EventHandler(this.toolStripButton1_Click);
@@ -274,7 +287,7 @@
             this.btn_open.Image = ((System.Drawing.Image)(resources.GetObject("btn_open.Image")));
             this.btn_open.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_open.Name = "btn_open";
-            this.btn_open.Size = new System.Drawing.Size(23, 22);
+            this.btn_open.Size = new System.Drawing.Size(29, 24);
             this.btn_open.Tag = "Abrir";
             this.btn_open.Text = "Abrir";
             this.btn_open.Click += new System.EventHandler(this.toolStripButton2_Click);
@@ -285,14 +298,15 @@
             this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
             this.btn_save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(23, 22);
+            this.btn_save.Size = new System.Drawing.Size(29, 24);
             this.btn_save.Tag = "salvar";
             this.btn_save.Text = "salvar";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // btn_copy
             // 
@@ -300,9 +314,10 @@
             this.btn_copy.Image = ((System.Drawing.Image)(resources.GetObject("btn_copy.Image")));
             this.btn_copy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_copy.Name = "btn_copy";
-            this.btn_copy.Size = new System.Drawing.Size(23, 22);
+            this.btn_copy.Size = new System.Drawing.Size(29, 24);
             this.btn_copy.Tag = "Copiar";
             this.btn_copy.Text = "Copiar";
+            this.btn_copy.Click += new System.EventHandler(this.btn_copy_Click);
             // 
             // btn_colar
             // 
@@ -310,14 +325,15 @@
             this.btn_colar.Image = ((System.Drawing.Image)(resources.GetObject("btn_colar.Image")));
             this.btn_colar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_colar.Name = "btn_colar";
-            this.btn_colar.Size = new System.Drawing.Size(23, 22);
+            this.btn_colar.Size = new System.Drawing.Size(29, 24);
             this.btn_colar.Tag = "Colar";
             this.btn_colar.Text = "Colar";
+            this.btn_colar.Click += new System.EventHandler(this.btn_colar_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // btn_bold
             // 
@@ -325,9 +341,10 @@
             this.btn_bold.Image = ((System.Drawing.Image)(resources.GetObject("btn_bold.Image")));
             this.btn_bold.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_bold.Name = "btn_bold";
-            this.btn_bold.Size = new System.Drawing.Size(23, 22);
+            this.btn_bold.Size = new System.Drawing.Size(29, 24);
             this.btn_bold.Tag = "Negrito";
             this.btn_bold.Text = "Negrito";
+            this.btn_bold.Click += new System.EventHandler(this.btn_bold_Click);
             // 
             // btn_italico
             // 
@@ -335,9 +352,10 @@
             this.btn_italico.Image = ((System.Drawing.Image)(resources.GetObject("btn_italico.Image")));
             this.btn_italico.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_italico.Name = "btn_italico";
-            this.btn_italico.Size = new System.Drawing.Size(23, 22);
+            this.btn_italico.Size = new System.Drawing.Size(29, 24);
             this.btn_italico.Tag = "itálico";
             this.btn_italico.Text = "itálico";
+            this.btn_italico.Click += new System.EventHandler(this.btn_italico_Click);
             // 
             // btn_sublinhado
             // 
@@ -345,9 +363,10 @@
             this.btn_sublinhado.Image = ((System.Drawing.Image)(resources.GetObject("btn_sublinhado.Image")));
             this.btn_sublinhado.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_sublinhado.Name = "btn_sublinhado";
-            this.btn_sublinhado.Size = new System.Drawing.Size(23, 22);
+            this.btn_sublinhado.Size = new System.Drawing.Size(29, 24);
             this.btn_sublinhado.Tag = "Sublinhar";
             this.btn_sublinhado.Text = "Sublinhar";
+            this.btn_sublinhado.Click += new System.EventHandler(this.btn_sublinhado_Click);
             // 
             // btn_fonte
             // 
@@ -355,14 +374,15 @@
             this.btn_fonte.Image = ((System.Drawing.Image)(resources.GetObject("btn_fonte.Image")));
             this.btn_fonte.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_fonte.Name = "btn_fonte";
-            this.btn_fonte.Size = new System.Drawing.Size(23, 22);
+            this.btn_fonte.Size = new System.Drawing.Size(29, 24);
             this.btn_fonte.Tag = "Fonte";
             this.btn_fonte.Text = "Fonte";
+            this.btn_fonte.Click += new System.EventHandler(this.btn_fonte_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // btn_left
             // 
@@ -370,9 +390,10 @@
             this.btn_left.Image = ((System.Drawing.Image)(resources.GetObject("btn_left.Image")));
             this.btn_left.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_left.Name = "btn_left";
-            this.btn_left.Size = new System.Drawing.Size(23, 22);
+            this.btn_left.Size = new System.Drawing.Size(29, 24);
             this.btn_left.Tag = "Alinhar a Esquerda";
             this.btn_left.Text = "Alinhar a Esquerda";
+            this.btn_left.Click += new System.EventHandler(this.btn_left_Click);
             // 
             // btn_right
             // 
@@ -380,9 +401,10 @@
             this.btn_right.Image = ((System.Drawing.Image)(resources.GetObject("btn_right.Image")));
             this.btn_right.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_right.Name = "btn_right";
-            this.btn_right.Size = new System.Drawing.Size(23, 22);
+            this.btn_right.Size = new System.Drawing.Size(29, 24);
             this.btn_right.Tag = "Alinhar a direita";
             this.btn_right.Text = "Alinhar a direita";
+            this.btn_right.Click += new System.EventHandler(this.btn_right_Click);
             // 
             // btn_centro
             // 
@@ -390,15 +412,17 @@
             this.btn_centro.Image = ((System.Drawing.Image)(resources.GetObject("btn_centro.Image")));
             this.btn_centro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_centro.Name = "btn_centro";
-            this.btn_centro.Size = new System.Drawing.Size(23, 22);
+            this.btn_centro.Size = new System.Drawing.Size(29, 24);
             this.btn_centro.Tag = "Alinhar ao centro";
             this.btn_centro.Text = "Alinhar ao centro";
+            this.btn_centro.Click += new System.EventHandler(this.btn_centro_Click);
             // 
             // rtb_text
             // 
-            this.rtb_text.Location = new System.Drawing.Point(0, 52);
+            this.rtb_text.Location = new System.Drawing.Point(0, 64);
+            this.rtb_text.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtb_text.Name = "rtb_text";
-            this.rtb_text.Size = new System.Drawing.Size(800, 400);
+            this.rtb_text.Size = new System.Drawing.Size(1065, 491);
             this.rtb_text.TabIndex = 2;
             this.rtb_text.Text = "";
             // 
@@ -406,15 +430,34 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1068, 554);
             this.Controls.Add(this.rtb_text);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
@@ -470,6 +513,9 @@
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
 
