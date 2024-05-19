@@ -475,6 +475,41 @@ namespace projeto_editor_de_texto
         {
             AumentarFonte();
         }
+
+        private void negritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Negrito();
+        }
+
+        private void itálicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Italico();
+        }
+
+        private void sublinhadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Underline();
+        }
+
+        private void centralizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Centralizar();
+        }
+
+        private void esquerdaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Esquerda();
+        }
+
+        private void direitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Direita();
+        }
+
+        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     }
 
